@@ -1,0 +1,44 @@
+/*
+ * Copyright (c) 2025 Christian Hirsch
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/ {
+
+	zephyr,user {
+		io-channels = <&adc 0>;
+	};
+
+	gpios {
+	        compatible = "gpio-leds";
+
+	        led_red: led_red {
+        			gpios = <&micromod_header 7 (GPIO_OPEN_DRAIN | GPIO_ACTIVE_LOW)>;
+	                label = "red LED";
+	        };
+
+	        led_green: led_green {
+        			gpios = <&micromod_header 6 (GPIO_OPEN_DRAIN | GPIO_ACTIVE_LOW)>;
+	                label = "green LED";
+	        };
+
+	        led_blue: led_blue {
+        			gpios = <&micromod_header 5 (GPIO_OPEN_DRAIN | GPIO_ACTIVE_LOW)>;
+	                label = "blue LED";
+	        };
+	};
+
+	aliases {
+		led1 = &led_green;
+		led2 = &led_blue;
+
+		factory-reset-led = &led_red;
+        factory-reset-btn = &boot_button;
+	};
+};
+
+&micromod_0_i2c {
+    status = "okay";
+    clock-frequency = <I2C_BITRATE_STANDARD>;
+};

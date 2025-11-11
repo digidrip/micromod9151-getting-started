@@ -1,0 +1,6 @@
+shield:
+  name: digidrip_micromod_dk
+  full_name: digidrip MicroMod DK
+  vendor: digidrip
+  supported_features:
+    - sensor

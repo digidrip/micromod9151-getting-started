@@ -1,0 +1,7 @@
+# MicroMod DK board configuration for the on-board STM32F103TB
+
+# Copyright (c) 2025 Christian Hirsch
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_MICROMOD_DK
+	select SOC_STM32F103XB

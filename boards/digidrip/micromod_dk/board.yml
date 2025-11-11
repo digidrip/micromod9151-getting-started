@@ -1,0 +1,5 @@
+board:
+  name: micromod_dk
+  vendor: digidrip
+  socs:
+  - name: stm32f103xb

@@ -1,0 +1,18 @@
+identifier: micromod-dk
+name: MicroMod-DK
+type: mcu
+arch: arm
+toolchain:
+  - gnuarmemb
+  - xtools
+  - zephyr
+ram: 20
+flash: 128
+supported:
+  - gpio
+  - i2c
+  - spi
+  - watchdog
+  - counter
+  - usb
+vendor: digidrip
